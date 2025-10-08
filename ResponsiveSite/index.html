@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | My Responsive Website</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* =============================
+           Global Reset
+           ============================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* =============================
+           Body Styling
+           ============================= */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* =============================
+           Header Styling
+           ============================= */
+        header {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* =============================
+           Navigation Bar
+           ============================= */
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            background-color: #444;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #555;
+        }
+
+        /* =============================
+           Main Content (Container + Boxes)
+           ============================= */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        .box {
+            flex: 1 1 300px; /* Grows and shrinks with min width 300px */
+            background-color: white;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* =============================
+           Responsive Image
+           ============================= */
+        img.responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* =============================
+           Footer Styling
+           ============================= */
+        footer {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* =============================
+           Responsive Design (Mobile View)
+           ============================= */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .box {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>My Responsive Website</h1>
+        <p>Resize the browser to see the layout change.</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="box">
+            <h2>Welcome</h2>
+            <p>This is a responsive box that adjusts its layout based on screen size. It's built with Flexbox.</p>
+        </div>
+
+        <div class="box">
+            <h2>Responsive Image</h2>
+            <img src="https://via.placeholder.com/600x400" alt="Sample" class="responsive-img" />
+        </div>
+
+        <div class="box">
+            <h2>More Content</h2>
+            <p>You can add more sections like this, and they'll automatically stack on smaller screens.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        &copy; 2025 My Responsive Website. All rights reserved.
+    </footer>
+
+</body>
+</html>

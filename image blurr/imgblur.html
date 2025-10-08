@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Blur on Hover Example</title>
+
+    <!-- 
+    ==========================================================
+    INTERNAL CSS
+    Cascading Style Sheet used to blur image initially,
+    and remove blur when hovered with mouse.
+    ==========================================================
+    -->
+    <style>
+        /* 
+        Step 1: Reset default spacing for all elements 
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+        Step 2: Body styling 
+        Center content both vertically and horizontally.
+        */
+        body {
+            display: flex;                
+            justify-content: center;      
+            align-items: center;          
+            height: 100vh;                
+            background-color: #f0f2f5;    
+            font-family: Arial, sans-serif;
+        }
+
+        /* 
+        Step 3: Image styling 
+        - Apply initial blur using CSS filter.
+        - Add smooth transition for hover effect.
+        */
+        .blur-image {
+            width: 450px;                 /* Set image width */
+            height: auto;                 /* Maintain aspect ratio */
+            border-radius: 12px;          /* Rounded corners */
+            filter: blur(6px);            /* Initially blurred */
+            transition: filter 0.6s ease; /* Smooth effect when hovering */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+
+        /* 
+        Step 4: Hover effect 
+        When the user hovers over the image, 
+        remove the blur using filter: none;
+        */
+        .blur-image:hover {
+            filter: none;                 /* Image becomes clear */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+    Step 5: HTML content 
+    The image below will appear blurred by default 
+    and clear when the mouse moves over it.
+    -->
+    <img 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" 
+        alt="Beautiful Landscape"
+        class="blur-image">
+
+</body>
+</html>
